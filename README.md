@@ -1,4 +1,4 @@
-# gsoc-tools - small utilitie collections
+# gsoc-tools - small utility collections
 
 # Collections
 ## emotet-locker
