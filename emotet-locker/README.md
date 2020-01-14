@@ -11,8 +11,8 @@ copy binary bin\emotet-locker.exe (x86) or bin\x64\emotet-locker.exe to somehwer
 Source code is also avilable, you can build it if necessary.
 
 # hash of binary
-33e3453875097943f8745ddd690c9153a8b769dc788ca63d0d57db021bccac18  bin/x64/emotet-locker.exe
-1cd1d9a84c77ab7d1666066c04ef124d4f9442981c4e2109c7e7cf797666a17a  bin/emotet-locker.exe
+a56fe527f15db198b9fdb7cc0b64d345d024f9ba8b6ff91c8c573931b4d7d98e *emotet-locker.exe
+2a6f570501782e653bab5365f26df1599b78c31bc24fd4996c8e4062b5b4008a *x64/emotet-locker.exe
 
 
 
