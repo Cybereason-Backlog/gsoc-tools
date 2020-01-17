@@ -1,14 +1,13 @@
 # about
-This tool grabs the system resource (example for mutex, for the prevenion of multiple execution) in advance and
-prevents emotet 1st stage executable binary from running.
+This tool grabs the mutex that emotet 1st stage binary gains in advance and prevents further activities by it.
 this just reduces the risk of infection on the windows devices.
 
 # how to install
 copy binary bin\emotet-locker.exe (x86) or bin\x64\emotet-locker.exe to somehwere on the machine and configure as runs only once when device is booted.
 
-* distribution and configuration via GPO is possible for enterprise usage.
-* configuring taskscheduler is recommended on personal user if single PC is shared with multiple users
-Source code is also avilable, you can build it if necessary.
+* Distribution and configuration via GPO is possible for enterprise usage.
+* Configuring taskscheduler is recommended on personal user if single PC is shared with multiple users
+* Source code is also avilable, you can build it if necessary.
 
 # hash of binary
 a56fe527f15db198b9fdb7cc0b64d345d024f9ba8b6ff91c8c573931b4d7d98e *emotet-locker.exe
