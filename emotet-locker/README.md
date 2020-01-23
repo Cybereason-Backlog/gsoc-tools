@@ -14,8 +14,9 @@ copy binary bin\emotet-locker.exe (x86) or bin\x64\emotet-locker.exe to somehwer
 156259759450fcc4011b4023b6065352d3fab745ed6021ffb54bb8d063cb7eeb  bin/x64/emotet-locker.exe
 
 # history
-Jan 24, 2020 - Fixed bug of mutex name generation in some cases and added another mutex ruless
-Jan 14, 2020 - Revised License text and removes dependencies of VC runtime
-Jan 4, 2020 - first import
+Jan 24, 2020 - Fixed bug of mutex name generation in some cases and added another mutex rule.</br>
+Thanks @gorimpthon (https://twitter.com/gorimpthon/) for your feedback</br>
+Jan 14, 2020 - Revised License text and removes dependencies of VC runtime</br>
+Jan 4, 2020 - first import</br>
 
 
