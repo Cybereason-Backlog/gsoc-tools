@@ -20,7 +20,7 @@
 #include <fileapi.h>
 
 #define LETTERS_NUM 26
-#define MAX_MUTANTS_NUM (LETTERS_NUM * 2)
+#define MAX_MUTANTS_NUM (LETTERS_NUM * 4)
 
 #define _LOG_PRINT(fmt, ...) _tprintf(fmt, __VA_ARGS__)
 
@@ -99,10 +99,16 @@ static HANDLE* emotet2019SepVerFunc(LPVOID param) {
 		if (((1 << i) & Drives)
 			&& _GetSerialNumber((TCHAR)('A' + i), &Serial)
 			&& _IsPhysicalDrives((TCHAR)('A' + i))) {
-			_snwprintf_s(szName, sizeof(szName) - 1, L"Global\\M%08X", Serial);
+			_snwprintf_s(szName, sizeof(szName) - 1, L"Global\\M%X", Serial);
 			_LOG_PRINT(L"[%c] Grabbing mutex '%s'\n", (TCHAR)('A' + i), szName);
 			lphMutants[j++] = _CreateMutex(szName);
-			_snwprintf_s(szName, sizeof(szName) - 1, L"Global\\I%08X", Serial);
+			_snwprintf_s(szName, sizeof(szName) - 1, L"Global\\I%X", Serial);
+			_LOG_PRINT(L"[%c] Grabbing mutex '%s'\n", (TCHAR)('A' + i), szName);
+			lphMutants[j++] = _CreateMutex(szName);
+			_snwprintf_s(szName, sizeof(szName) - 1, L"M%X", Serial);
+			_LOG_PRINT(L"[%c] Grabbing mutex '%s'\n", (TCHAR)('A' + i), szName);
+			lphMutants[j++] = _CreateMutex(szName);
+			_snwprintf_s(szName, sizeof(szName) - 1, L"I%X", Serial);
 			_LOG_PRINT(L"[%c] Grabbing mutex '%s'\n", (TCHAR)('A' + i), szName);
 			lphMutants[j++] = _CreateMutex(szName);
 		}
@@ -132,6 +138,7 @@ DWORD WINAPI threadProc(LPVOID param) {
 	}
 	return 0;
 }
+
 
 int main(int argc, TCHAR* argv[]) {
 

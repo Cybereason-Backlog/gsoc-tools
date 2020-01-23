@@ -10,8 +10,12 @@ copy binary bin\emotet-locker.exe (x86) or bin\x64\emotet-locker.exe to somehwer
 * Source code is also avilable, you can build it if necessary.
 
 # hash of binary
-a56fe527f15db198b9fdb7cc0b64d345d024f9ba8b6ff91c8c573931b4d7d98e *emotet-locker.exe
-2a6f570501782e653bab5365f26df1599b78c31bc24fd4996c8e4062b5b4008a *x64/emotet-locker.exe
+79c2c400dd5b2653f1d7d11a8c3978c276a467c2be657802ac5138c426e1cb39  bin/emotet-locker.exe
+156259759450fcc4011b4023b6065352d3fab745ed6021ffb54bb8d063cb7eeb  bin/x64/emotet-locker.exe
 
+# history
+Jan 24, 2020 - Fixed bug of mutex name generation in some cases and added another mutex ruless
+Jan 14, 2020 - Revised License text and removes dependencies of VC runtime
+Jan 4, 2020 - first import
 
 
